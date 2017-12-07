@@ -12,7 +12,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <?php if ($this->session->userdata('LOGADO')) { ?>
-                    <li class="dropdown">
+<!--                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <?= $this->session->userdata('nome_usuario'); ?> 
                             <span class="caret"></span>
@@ -22,7 +22,7 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="<?= base_url('admin/acesso/logout') ?>" onclick="return confirm('Deseja realmente sair?')">Sair</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                 <?php } else { ?>
                     <li><a href="<?= base_url('admin/acesso/login') ?>">Entrar</a></li>
                 <?php } ?>
@@ -46,6 +46,11 @@
                 <li role="separator" class="divider"></li>
                 <li><a href="<?= base_url('admin/contatos') ?>">Contatos</a></li>
                 <li role="separator" class="divider"></li>
+                <li><a  href="<?= base_url('admin/acesso/configuracoes') ?>" >Configurações</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="<?= base_url('admin/acesso/logout') ?>" onclick="return confirm('Deseja realmente sair?')">Sair</a></li>
+                <li role="separator" class="divider"></li>
+        
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
